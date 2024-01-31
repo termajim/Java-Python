@@ -1,6 +1,5 @@
 #ohjelma hemoglobiini arviointiin
 
-# kysytään käyttäjältä lähtö arvot
 sukup = input("Oletko nainen vai mies (N/M)? ")
 hgb = int(input("Syötä hemoglobiini arvosi g/l: "))
 
