@@ -1,7 +1,7 @@
 # luvut ohjelma
 luvut = []
 while True:
-    syota = input("Anna luku: ")
+    syota = input("Anna luku (Paina ENTER lopettaa toiminnon): ")
     if not syota:
         break
     try:
