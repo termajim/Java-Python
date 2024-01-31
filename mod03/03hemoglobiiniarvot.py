@@ -4,8 +4,7 @@
 sukup = input("Oletko nainen vai mies (N/M)? ")
 hgb = int(input("Syötä hemoglobiini arvosi g/l: "))
 
-#jaetaan tarkastelu erikseen naisiin ja miehiin
-if sukup == "N" or "n":
+if sukup.upper() == "N" or "n":
     if 117 <= hgb < 175:
         print("Hemoglobiinisi on normaalilla tasolla")
     elif hgb > 175:
