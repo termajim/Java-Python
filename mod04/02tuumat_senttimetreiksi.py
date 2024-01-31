@@ -1,4 +1,4 @@
-# Tummat senttimetreiksi ohjelma
+# Tuummat senttimetreiksi ohjelma
 def tuumat_cm(tuumat):
     return tuumat * 2.54
 
