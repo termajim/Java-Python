@@ -1,0 +1,165 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Verdana;
+    scroll-behavior: smooth;
+}
+
+nav {
+    height: 80px;
+    background: darkred;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem calc((100vw - 1300px) / 2);
+}
+
+.logo {
+    color: gold;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0 2rem;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    padding: 0 1.5rem;
+}
+
+nav a:hover {
+    color: whitesmoke;
+}
+
+.hero {
+    background: darkred;
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 95vh;
+    padding:3rem calc((100vw - 1300px) / 2);
+}
+
+.column-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: black;
+    padding: 0rem 2rem;
+}
+
+.column-left h1 {
+    margin-bottom: 1rem;
+    font-size: 3rem;
+}
+
+.column-left p {
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+.colum-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0rem 3rem;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.main {
+    background-color: #9c9cac;
+    padding: 10rem 0;
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    height: 90%;
+    z-index: 1;
+    max-width: 1300px;
+    padding: 0 50px;
+}
+
+.main-content {
+    color: white;
+}
+
+.main-content h1 {
+    font-size: 2rem;
+    background-color: gold;
+    background-image: linear-gradient(to top, #ff087b 0%, #ed1a52 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+}
+
+.main-img-container {
+    text-align: right;
+}
+
+.main--img--card {
+    margin: 0px;
+    height: 200px;
+    width: 200px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #9c9cac;
+}
+
+.yhteystiedot {
+    background: gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 10rem 0;
+}
+
+.yhteystiedot h1 {
+    background-color: olive;
+    background-image: linear-gradient(to right, #ffea16, #ffc124);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.yhteystiedot p {
+    color: white;
+}
+
+.main-content h3 {
+    padding: 1rem;
+}
