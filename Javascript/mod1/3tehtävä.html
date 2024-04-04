@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lasku operaatio</title>
+</head>
+<body>
+
+<script>
+let num1 = parseInt(prompt("Anna ensimmäinen kokonaisluku: "));
+let num2 = parseInt(prompt("Anna toinen kokonaisluku: "));
+let num3 = parseInt(prompt("Anna kolmas kokonaisluku: "));
+
+//Laskuja
+let yhteensä = num1 + num2 + num3;
+let product = num1 * num2 * num3;
+let keskiarvo = yhteensä / 3;
+
+let yhteensäElement = document.createElement("p");
+yhteensäElement.textContent = "Yhteensä: " + yhteensä;
+let productElement = document.createElement("p");
+productElement.textContent = "Product: " + product;
+let keskiarvoElement = document.createElement("p");
+keskiarvoElement.textContent = "Keskiarvo: " + keskiarvo.toFixed(2);  //Tulee vain kahden desimaalin tarkuudella
+
+document.body.appendChild(yhteensäElement);
+document.body.appendChild(productElement);
+document.body.appendChild(keskiarvoElement);
+
+</script>
+
+</body>
+</html>

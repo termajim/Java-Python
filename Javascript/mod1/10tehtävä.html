@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Noppa heitto ohjelma</title>
+</head>
+<body>
+
+<script>
+    let numNoppa = parseInt(prompt("Kerro nopan numero: "));
+    let haluttuSumma = parseInt(prompt("Kerro haluttu silmälukujen summa: "));
+    let onnistuneetHeitot = 0;
+
+    // Heitetään noppaa 10 000 kertaa
+    for (let i = 0; i < 10000; i++) {
+        let summa = 0;
+        for (let j = 0; j < numNoppa; j++) {
+            // Heitä noppaa
+            let heitto = Math.floor(Math.random() * 6) + 1;
+            summa += heitto;
+        }
+        // Katotaan, että summa täsmää heittojen mukaan
+        if (summa === haluttuSumma) {
+            onnistuneetHeitot++;
+        }
+    }
+    let todennäköisyys = (onnistuneetHeitot / 10000) * 100;
+
+    //Tehdään HTML Elementti
+    let tulosElement = document.createElement("p");
+    tulosElement.textContent = "Tödennäköisyys saada summa " + haluttuSumma + ", " + numNoppa + " nopalla on " + todennäköisyys.toFixed(2) + "%.";
+
+    //Tulostetaan tulos
+    document.body.appendChild(tulosElement);
+</script>
+
+</body>
+</html>
