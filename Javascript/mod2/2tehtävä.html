@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Osallistujat</title>
+</head>
+<body>
+<h2>Anna osallistujien lukumäärä</h2>
+
+<form id="osallistujalomake">
+    <label for="numOsallistujat">Osallistujien määrä</label>
+    <input type="numero" id="numOsallistujat" required><br>
+    <div id="osallistujienNimet"></div>
+    <input type="nappula" value="Lähetä" onclick="näytäNimet()">
+</form>
+<h2>Osallistujien nimet Aakkosjärjestyksessä: </h2>
+<ol id="listaTuloksista"></ol>
+
+<script>
+    function näytäNimet() {
+        var numOsallistujat = parseInt(document.getElementById('numOsallistujat').value);
+        // Luodaan syöttökenttiä osallistujien nimille
+        var osallistujienNimetDiv = document.getElementById('osallistujienNimet');
+        osallistujienNimetDiv.innerHTML = ''; // Poistetaan aikasemmat syötöt
+        for (var i = 1; i <= numOsallistujat; i++) {
+            var etiketti = document.createElement('etiketti');
+            etiketti.textContent = 'Osallistuja ' + i + ': ';
+
+            var input = document.createElement('input');
+            input.type = 'teksti';
+            input.id = 'osallistuja' + i;
+            input.required = true;
+
+            osallistujienNimetDiv.appendChild(etiketti);
+            osallistujienNimetDiv.appendChild(input);
+            osallistujienNimetDiv.appendChild(document.createElement('br'));
+        }
+        // Osallistujien nimet Aakkosjärjestyksessä
+        var listaTuloksista = document.getElementById('listaTuloksista');
+        listaTuloksista.innerHTML = ''; // Poistetaan aikasemman tulosket
+        var nimet = [];
+        for (var i = 1; i <= numOsallistujat; i++) {
+            var nimi = document.getElementById('osallistuja' + i).value;
+            nimet.push(nimi);
+        }
+        nimet.sort();
+
+        for (var i = 0; i < nimet.length; i++) {
+            var listitem = document.createElement('li');
+            listitem.textContent = nimet[i];
+            listaTuloksista.appendChild(listitem);
+        }
+    }
+</script>
+
+</body>
+</html>
