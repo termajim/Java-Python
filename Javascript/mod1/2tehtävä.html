@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tervehdi Ohjelma</title>
+</head>
+<body>
+
+<script>
+    let käyttäjänimi = prompt("Kerro nimesi: ");
+    let viesti = "Terve, " + käyttäjänimi;
+    //Alempana tehdään HTML elementti joka esittää tervedyksen
+    let tervehdysElementti = document.createElement("p");
+    tervehdysElementti.textContent = viesti;
+    document.body.appendChild(tervehdysElementti)
+</script>
+
+</body>
+</html>

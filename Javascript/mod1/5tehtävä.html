@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vuosi ohjelma</title>
+</head>
+<body>
+
+<script>
+  let vuosi = parseInt(prompt("Kerro vuosi: "));
+  //Katotaanko onko karkausvuosi
+  let onKarkausvuosi = false;
+  if ((vuosi % 4 === 0 && vuosi % 100 !== 0) || (vuosi % 400 === 0)) {
+      onKarkausvuosi = true;
+  }
+  // Tehdään HTML Elementti
+  let tulosElement = document.createElement("p");
+  if (onKarkausvuosi) {
+      tulosElement.textContent = vuosi + " on karkausvuosi.";
+  } else {
+      tulosElement.textContent = vuosi + " ei ole karkausvuosi.";
+  }
+
+  //Tulostetaan tulos
+  document.body.appendChild(tulosElement);
+</script>
+
+</body>
+</html>

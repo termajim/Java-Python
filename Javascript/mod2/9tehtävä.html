@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Numeroooot</title>
+</head>
+<body>
+
+<script>
+    function even(arr) {
+        // Tehdään numeroille lista
+        var parillisetNumerot = [];
+        for (var i = 0; i < arr.length; i++) {
+            // Katotaan onko parillinen-numero
+            if (arr[i] % 2 === 0) {
+                parillisetNumerot.push(arr[i]);
+            }
+        }
+        return parillisetNumerot;
+    }
+    var numerot = [2, 7, 4];
+    var parillisetNumerot = even(numerot);
+
+    //Tulostetaan molemmat numerot
+    console.log("Alkuperäiset numerot:", numerot);
+    console.log("Parilliset numerot:", parillisetNumerot);
+</script>
+
+</body>
+</html>
